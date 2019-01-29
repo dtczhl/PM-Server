@@ -23,7 +23,7 @@ Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
 
 This tutorial will show you how to use the server.
 
-1. Download the tutorial folder
+1. Download the `tutorial` folder
 1. `app.py` is the program as shown below. It prints out some messages, and write a string to file named `/data/tutorial.txt`.
 
     <img src="./images/app.png" width=400 />
@@ -40,7 +40,7 @@ This tutorial will show you how to use the server.
     ```
     docker image ls
     ```
-    You can see my_tutorial docker image
+    You can see `my_tutorial` docker image
 
     <img src="./images/docker_img_ls.png" width=600 />
 1. To save `my_tutorial` docker as an archive file so that you can upload to server. run
