@@ -36,10 +36,10 @@ This tutorial will show you how to use the server.
     ```
     `--tag=` is your docker image name
 1. The docker image has been installed in you host machine already. To show your docker images, run
-```
-docker image ls
-```
-You can see my_tutorial docker image
+    ```
+    docker image ls
+    ```
+    You can see my_tutorial docker image
 
     <img src="./images/docker_img_ls.png" width=450 />
 1. To save `my_tutorial` docker as an archive file so that you can upload to server. run
