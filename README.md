@@ -31,10 +31,10 @@ This tutorial will show you how to use the server.
 
     <img src="./images/dockerfile.png" width=400 />
 1. Build docker image. Under this tutorial folder, run
-  ```
-  docker build --tag=my_tutorial .
-  ```
-  `--tag=` is your docker image name
+    ```
+    docker build --tag=my_tutorial .
+    ```
+    `--tag=` is your docker image name
 1. The docker image has been installed in you host machine already. To show your docker images, run
 ```
 docker image ls
