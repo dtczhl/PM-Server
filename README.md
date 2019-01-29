@@ -43,15 +43,17 @@ This tutorial will show you how to use the server.
 
     <img src="./images/docker_img_ls.png" width=450 />
 1. To save `my_tutorial` docker as an archive file so that you can upload to server. run
-  ```
-  docker save -o my_tutorial.tar my_tutorial
-  ```
-  `-o` specifies the output path/filename. `my_tutorial` is the docker name
+    ```
+    docker save -o my_tutorial.tar my_tutorial
+    ```
+    `-o` specifies the output path/filename. `my_tutorial` is the docker name
 1. Upload to server. Login in the server, under `images` tag, click `Import` button
-  <img src="./images/images_docker.png" width=500 />
+
+    <img src="./images/images_docker.png" width=500 />
 1. Upload `my_tutorial.tar`
 1. Go to `Containers` tag, click `Add container`, fill in Name, Image, scroll down to the Volumes tag, click map additional volume, type in `/data` (because we save a file to /data/tutorial.txt), select your volume,
-  <img src="./images/container_docker.png" width=600 />
+
+    <img src="./images/container_docker.png" width=600 />
 1. Click `Deploy the container`. Your docker image is running automatically. After it finishes, it stops.
 1. Click the `Logs` under `Quick actions`, you can see the output
 
