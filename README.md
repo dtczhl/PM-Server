@@ -9,7 +9,7 @@ Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
 * IP address: http://169.237.7.61:8000
 * Username: FirstnameLastname (Change your password ASAP)
 
-    <img src="./images/docker_login.png" width=400/>
+    <img src="./images/docker_login.png" width=500/>
 
 * One docker Volume is created for each one. Do not delete it or create new one. You're only allowed to access the folder/path of the assigned Volume.
 * To access your Volume data, use FTP with username: FirstnameLastname (Come to me to change your FTP password)
@@ -30,7 +30,7 @@ This tutorial will show you how to use the server.
 1. `requirements.txt` specifies external packages your program is dependent on. Since we only use builtin `time` and `os` packages in this tutorial, this file is empty.
 1. `Dockerfile` specifies how to run your program.
 
-    <img src="./images/dockerfile.png" width=400 />
+    <img src="./images/dockerfile.png" width=500 />
 1. Build docker image. Under this tutorial folder, run
     ```
     docker build --tag=my_tutorial .
@@ -42,7 +42,7 @@ This tutorial will show you how to use the server.
     ```
     You can see my_tutorial docker image
 
-    <img src="./images/docker_img_ls.png" width=450 />
+    <img src="./images/docker_img_ls.png" width=600 />
 1. To save `my_tutorial` docker as an archive file so that you can upload to server. run
     ```
     docker save -o my_tutorial.tar my_tutorial
@@ -50,7 +50,7 @@ This tutorial will show you how to use the server.
     `-o` specifies the output path/filename. `my_tutorial` is the docker name
 1. Upload to server. Login in the server, under `images` tag, click `Import` button
 
-    <img src="./images/images_docker.png" width=500 />
+    <img src="./images/images_docker.png" width=600 />
 1. Upload `my_tutorial.tar`
 1. Go to `Containers` tag, click `Add container`, fill in Name, Image, scroll down to the Volumes tag, click map additional volume, type in `/data` (because we save a file to `/data/tutorial.txt`), select your volume,
 
@@ -58,7 +58,7 @@ This tutorial will show you how to use the server.
 1. Click `Deploy the container`. Your docker image is running automatically. After it finishes, it stops.
 1. Click the `Logs` under `Quick actions`, you can see the output
 
-    <img src="./images/log_docker.png" width=500 />
+    <img src="./images/log_docker.png" width=600 />
 1. To access `tutorial.txt`, login in using FTP client. Type in the IP address, username (FirstnameLastname), and your password. You can find the `tutorial.txt` file under your root directory
 
     <img src="./images/ftp.png" width=600/>
