@@ -8,7 +8,7 @@ Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
 ## Access Docker Environment
 * IP address: http://169.237.7.61:8000
 * Username: FirstnameLastname (Change your password ASAP)
-  <img src="./images/docker_login.png" width=200/>
+  <img src="./images/docker_login.png" width=400/>
 
 * One docker Volume is created for each one. Do not delete it or create new one. You're only allowed to access the folder/path of the assigned Volume.
 * To access your Volume data, use FTP with username: FirstnameLastname (Come to me to change your FTP password)
@@ -25,11 +25,13 @@ This tutorial will show you how to use the server.
 1. Download the tutorial folder
 1. `app.py` is the program as shown below. It prints out some messages, and write a string to file named `/data/tutorial.txt`.
   <img src="./images/app.png" width=400 />
+  
 1. `requirements.txt` specifies external packages your program is dependent on. Since we only use builtin `time` and `os` packages in this tutorial, this file is empty.
 1. `Dockerfile` specifies how to run your program.
 
   <img src="./images/dockerfile.png" width=400 />
 1. Build docker image. Under this tutorial folder, run
+
   ```
   docker build --tag=my_tutorial .
   ```
