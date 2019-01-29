@@ -24,8 +24,7 @@ This tutorial will show you how to use the server.
 
 1. Download the tutorial folder
 1. `app.py` is the program as shown below. It prints out some messages, and write a string to file named `/data/tutorial.txt`.
-  <img src="./images/app.png" width=400 />
-  
+    <img src="./images/app.png" width=400 />
 1. `requirements.txt` specifies external packages your program is dependent on. Since we only use builtin `time` and `os` packages in this tutorial, this file is empty.
 1. `Dockerfile` specifies how to run your program.
 
