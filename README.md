@@ -13,7 +13,7 @@ Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
     <img src="./images/docker_login.png" width=500/>
 
 * One docker Volume is created for each one. Do not delete it or create new one. You're only allowed to access the folder/path of the assigned Volume.
-* To access your Volume data, use FTP with username: FirstnameLastname (Come to me to change your FTP password)
+* To access your Volume data, use SFTP with username: FirstnameLastname (Come to me to change your SFTP password)
 
 ### Important!
 
@@ -53,13 +53,11 @@ This tutorial will show you how to use the server.
 
     <img src="./images/images_docker.png" width=600 />
 1. Upload `my_tutorial.tar`
-1. Go to `Containers` tag, click `Add container`, fill in Name, Image, scroll down to the Volumes tag, click map additional volume, type in `/data` (because we save a file to `/data/tutorial.txt`), select your volume named FirstnameLastnameVolume (everyone is pre-allocated with one)
+1. Go to `Containers` tag, click `Add container`, fill in Name, Image, scroll down to the Volumes tag, click map additional volume, type in `/data` (because we save a file to `/data/tutorial.txt`), select your volume named FirstnameLastname (everyone is pre-allocated with one)
 
     <img src="./images/container_docker.png" width=600 />
 1. Click `Deploy the container`. Your docker image is running automatically. It stops after it finish running the program.
 1. Click the `Logs` under `Quick actions`, you can see the output from `print()`
 
     <img src="./images/log_docker.png" width=600 />
-1. To access `/data/tutorial.txt`, login in using any FTP client you like (I'm using FileZilla in Ubuntu). Type in the IP address (same as the server, but without the port number), username (FirstnameLastname), and your password. You can find the `tutorial.txt` file under your root directory
-
-    <img src="./images/ftp.png" width=600/>
+1. To access `/data/tutorial.txt`, login in using any SFTP client you like (I'm using FileZilla in Ubuntu). Type in the IP address (same as the server, but without the port number), username (FirstnameLastname), your password, and port 22. You can find the `tutorial.txt` file under your `Volume` directory
