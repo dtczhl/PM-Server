@@ -42,7 +42,7 @@ This tutorial shows how to run Tensorflow with GPU support.
     <img src="./images/container_interface.png" width=400 />
 1. Type in **Name**, **Image** (tensorflow/tensorflow:1.12.0-gpu-py3), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter. **For easy management, I have allocated a port range for each one <a href="port_allocate"> here </a>**. Below is an example
 
-    <img src="./images/port_container.png" width=500 />
+    <img src="./images/port_container.png" width=800 />
 1. Under `Advanced container settings`: `Command & logging`, choose Console `Interactive & TTY (-i -t)`
 1. Under `Runtime & Resources`. Choose `Runtime` to nvidia
 1. Click `Deploy the container`. Your container is running now.
