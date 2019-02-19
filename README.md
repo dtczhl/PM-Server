@@ -1,10 +1,13 @@
 # PM-Server
 
-**Internal Use**  
-**All are welcome to edit**
+Please refer to
+**https://spirit.cs.ucdavis.edu/workstation**
+
+
+## Internal Maintenance Version
+
 
 Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/mohapatra/)  
-Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
 
 ## Access Docker Environment
 * IP address: http://169.237.7.61:8000
@@ -12,15 +15,72 @@ Maintainer: [Huanle Zhang](https://www.huanlezhang.com)
 
     <img src="./images/docker_login.png" width=500/>
 
-* One docker Volume is created for each one. Do not delete it or create new one. You're only allowed to access the folder/path of the assigned Volume.
-* To access your Volume data, use SFTP with username: FirstnameLastname (Come to me to change your SFTP password)
 
 ### Important!
 
 * Please remove unused docker images and containers to save space.
-* Please do **NOT** use the server to store your data. We have ordered a data station and you can save your data there.
+* Please do **NOT** use the server to store your data. We have a data station to save your data there.
+
+### Port Allocation
+<p id="port_allocate"> Port allocation </p>
+** Please use your own ports **  
+* Huanle Zhang: 55000 - 55099
+* Abhishek Roy: 55100 - 55199
+* Anshuman Chhabra: 55200 - 55299
+* Debraj Basu: 55300 - 55399
+* Hao Fu: 55400 - 55499
+* Tianbo Gu: 55500 - 55599
+* Zheng Fang: 55600 - 55699
+* Muchen Wu: 55700 - 55799
 
 ## Tutorial
+
+This tutorial shows how to run Tensorflow with GPU support.
+
+1. Add container
+
+  <img src="./images/container_interface.png" width=400 />
+1. Type in **Name**, **Image** (tensorflow/tensorflow:1.12.0-gpu), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter. **For easy management, I have allocated a port range for each one <a href="port_allocate"> here </a>**. Below is an example
+
+  <img src="./images/port_container.png" width=500 />
+1. Under `Advanced container settings`: `Command & logging`, choose Console `Interactive & TTY (-i -t)`
+
+1. Under `Runtime & Resources`. Choose `Runtime` to nvidia
+
+1. Click `Deploy the container`. Your container is running now.
+
+1. To enable SSH login into your container. Click Console of your container, and connects. Type in the following commands to install SSH
+
+  ```
+  apt-get update
+  apt-get install ssh
+  service ssh restart
+  ```
+1. You need to create non-root user for SSH
+
+  ```
+  adduser USERNAME
+  ```
+1. Connect to your container (you can regard it as a standalone computer)
+
+  ```
+  ssh USERNAME@IP -p Port  
+  ```
+
+
+## Notes
+
+* Tensorflow 1.13 is not supported. 1.12.0 is working. Old Tensorflow versions might also not supported.
+* If you encounter unexpected errors such as "not enough shared memory", contact the administrator. Once you get a normal user account of the workstation (not Portainer account) from the administrator, you can then ssh into the workstation and use docker command options (e.g. `--shm-size`) not supported by Portatiner yet. The following command provides a Tensorflow code example, you can use it check whether your environment is good.
+
+  ```
+  docker run --runtime=nvidia -it --shm-size=256m --rm tensorflow/tensorflow:1.12.0-gpu-py3    python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
+  ```
+  Just replace the content after -c of the above command to your code.
+
+## Run Basic Programs (Not Recommended)
+
+** Discontinued! SFTP is disabled and Volumes are deleted**
 
 This tutorial will show you how to use the server.
 
