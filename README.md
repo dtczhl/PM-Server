@@ -23,7 +23,6 @@ Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/moh
 
 ### Port Allocation
 <p id="port_allocate"> Port allocation </p>
-**Please use your own ports**  
 
 * Huanle Zhang: 55000 - 55099
 * Abhishek Roy: 55100 - 55199
