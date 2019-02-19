@@ -23,7 +23,7 @@ Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/moh
 
 ### Port Allocation
 <p id="port_allocate"> Port allocation </p>
-** Please use your own ports **  
+**Please use your own ports**  
 * Huanle Zhang: 55000 - 55099
 * Abhishek Roy: 55100 - 55199
 * Anshuman Chhabra: 55200 - 55299
@@ -39,33 +39,30 @@ This tutorial shows how to run Tensorflow with GPU support.
 
 1. Add container
 
-  <img src="./images/container_interface.png" width=400 />
-1. Type in **Name**, **Image** (tensorflow/tensorflow:1.12.0-gpu), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter. **For easy management, I have allocated a port range for each one <a href="port_allocate"> here </a>**. Below is an example
+    <img src="./images/container_interface.png" width=400 />
+1. Type in **Name**, **Image** (tensorflow/tensorflow:1.12.0-gpu-py3), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter. **For easy management, I have allocated a port range for each one <a href="port_allocate"> here </a>**. Below is an example
 
-  <img src="./images/port_container.png" width=500 />
+    <img src="./images/port_container.png" width=500 />
 1. Under `Advanced container settings`: `Command & logging`, choose Console `Interactive & TTY (-i -t)`
-
 1. Under `Runtime & Resources`. Choose `Runtime` to nvidia
-
 1. Click `Deploy the container`. Your container is running now.
-
 1. To enable SSH login into your container. Click Console of your container, and connects. Type in the following commands to install SSH
 
-  ```
-  apt-get update
-  apt-get install ssh
-  service ssh restart
-  ```
+    ```
+    apt-get update
+    apt-get install ssh
+    service ssh restart
+    ```
 1. You need to create non-root user for SSH
 
-  ```
-  adduser USERNAME
-  ```
+    ```
+    adduser USERNAME
+    ```
 1. Connect to your container (you can regard it as a standalone computer)
 
-  ```
-  ssh USERNAME@IP -p Port  
-  ```
+    ```
+    ssh USERNAME@IP -p Port  
+    ```
 
 
 ## Notes
