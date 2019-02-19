@@ -22,7 +22,6 @@ Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/moh
 * Please do **NOT** use the server to store your data. We have a data station to save your data there.
 
 ### Port Allocation
-<p id="port_allocate"> Port allocation </p>
 
 * Huanle Zhang: 55000 - 55099
 * Abhishek Roy: 55100 - 55199
@@ -40,7 +39,7 @@ This tutorial shows how to run Tensorflow with GPU support.
 1. Add container
 
     <img src="./images/container_interface.png" width=400 />
-1. Type in **Name**, **Image** (tensorflow/tensorflow:1.12.0-gpu-py3), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter. **For easy management, I have allocated a port range for each one <a href="port_allocate"> here </a>**. Below is an example
+1. Type in **Name**, **Image** (e.g., tensorflow/tensorflow:1.12.0-gpu-py3), enable `Publish all exposed ports`, Port mapping 22 for ssh, 8888 for Jupyter, etc. **For easy management, I have allocated a port range for each one before**. Below is an example
 
     <img src="./images/port_container.png" width=800 />
 1. Under `Advanced container settings`: `Command & logging`, choose Console `Interactive & TTY (-i -t)`
@@ -53,12 +52,12 @@ This tutorial shows how to run Tensorflow with GPU support.
     apt-get install ssh
     service ssh restart
     ```
-1. You need to create non-root user for SSH
+1. You need to create a non-root user for SSH
 
     ```
     adduser USERNAME
     ```
-1. Connect to your container (you can regard it as a standalone computer)
+1. Connect to your container (you can regard it as your own standalone computer)
 
     ```
     ssh USERNAME@IP -p Port  
@@ -67,8 +66,13 @@ This tutorial shows how to run Tensorflow with GPU support.
 
 ## Notes
 
-* Tensorflow 1.13 is not supported. 1.12.0 is working. Old Tensorflow versions might also not supported.
-* If you encounter unexpected errors such as "not enough shared memory", contact the administrator. Once you get a normal user account of the workstation (not Portainer account) from the administrator, you can then ssh into the workstation and use docker command options (e.g. `--shm-size`) not supported by Portatiner yet. The following command provides a Tensorflow code example, you can use it check whether your environment is good.
+* Tensorflow GPU Compatibility
+  * 1.13.0 &#x274C;
+  * 1.12.0 &#x2705;
+  * 1.11.0 &#x2705;
+  * 1.10.0 &#x2705;
+  * 1.5.0 &#x274C;
+* If you encounter unexpected errors such as "not enough shared memory", contact the administrator. Once you get a normal user account of the workstation (not Portainer account) from the administrator, you can then ssh into the workstation and use docker command options (e.g. `--shm-size`). The following command provides a Tensorflow code example, you can use it check whether your environment is good.
 
   ```
   docker run --runtime=nvidia -it --shm-size=256m --rm tensorflow/tensorflow:1.12.0-gpu-py3    python -c "import tensorflow as tf; tf.enable_eager_execution(); print(tf.reduce_sum(tf.random_normal([1000, 1000])))"
