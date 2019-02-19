@@ -77,7 +77,7 @@ This tutorial shows how to run Tensorflow with GPU support.
 
 ## Run Basic Programs (Not Recommended)
 
-** Discontinued! SFTP is disabled and Volumes are deleted**
+**Discontinued! SFTP is disabled and Volumes are deleted**
 
 This tutorial will show you how to use the server.
 
