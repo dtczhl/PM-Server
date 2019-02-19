@@ -23,14 +23,14 @@ Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/moh
 
 ### Port Allocation
 
-* Huanle Zhang: 55000 - 55099
-* Abhishek Roy: 55100 - 55199
-* Anshuman Chhabra: 55200 - 55299
-* Debraj Basu: 55300 - 55399
-* Hao Fu: 55400 - 55499
-* Tianbo Gu: 55500 - 55599
-* Zheng Fang: 55600 - 55699
-* Muchen Wu: 55700 - 55799
+* Huanle Zhang: 50000 - 50999
+* Abhishek Roy: 51000 - 51999
+* Anshuman Chhabra: 52000 - 52999
+* Debraj Basu: 53000 - 53999
+* Hao Fu: 54000 - 54999
+* Tianbo Gu: 55000 - 55999
+* Zheng Fang: 56000 - 56999
+* Muchen Wu: 57000 - 57999
 
 ## Tutorial
 
