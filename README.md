@@ -31,6 +31,7 @@ Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/moh
 * Tianbo Gu: 55000 - 55999
 * Zheng Fang: 56000 - 56999
 * Muchen Wu: 57000 - 57999
+* Jiuming Chen: 58000 - 58999
 
 ## Tutorial
 
