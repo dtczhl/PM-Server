@@ -1,13 +1,15 @@
 # PM-Server
 
-Please refer to
+I also copy this repo to   
 **https://spirit.cs.ucdavis.edu/workstation**
 
 
 ## Internal Maintenance Version
 
-
 Advisor: *Prof.* [Prasant Mohapatra](https://faculty.engineering.ucdavis.edu/mohapatra/)  
+
+For updated info or reporting issues, please go to   
+https://github.com/dtczhl/PM-Server
 
 ## Access Docker Environment
 * IP address: http://169.237.7.61:8000
